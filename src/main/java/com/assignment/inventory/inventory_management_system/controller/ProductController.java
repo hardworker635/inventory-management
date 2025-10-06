@@ -57,7 +57,7 @@ public class ProductController {
     // find by sku - used by shop owner
     // sku is unique
     @GetMapping("/sku/{sku}")
-    public ResponseEntity<ProductDTO> getProductById(@PathVariable("sku") String sku){
+    public ResponseEntity<ProductDTO> getProductBySku(@PathVariable("sku") String sku){
 
         ResponseEntity<ProductDTO> obj = new ResponseEntity<>(productServiceInterface.retrieveProductBySku(sku),HttpStatus.OK);
         return obj;
