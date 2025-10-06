@@ -103,6 +103,7 @@ src/
 
 1. The application supports both local and cloud PostgreSQL databases. You can either:
     - Use your **local PostgreSQL instance** by updating credentials in `application.properties`,
+      
     
     ```
     spring.datasource.url=jdbc:postgresql://localhost:5432/inventory_db
@@ -111,12 +112,14 @@ src/
     ```
     
     - Connect to a **hosted PostgreSQL database** on Aiven (Free Tier), which comes pre-configured with the `Product` table.
+     
     
     ```
     spring.datasource.url=jdbc:postgresql://inventorymanagement-konalikhita-87a4.e.aivencloud.com:21062/defaultdb?sslmode=require
     spring.datasource.username=avnadmin
     spring.datasource.password=AVNS_LPyJLE_-5pwTHjGTCCr
     ```
+
     
 
 1. Build and Run the application using maven commands: 
@@ -125,6 +128,7 @@ src/
     mvn clean install
     mvn spring-boot:run
     ```
+
     
 
 1. The app is available at  **http://localhost:8080/api/products**
@@ -138,14 +142,18 @@ src/
     - getProductById(productId) - `/api/products/{id}` - Get product by ID
     - getProductBySku(sku) -  `/api/products/sku/{sku}` - Get product by SKU
     - getAllLowStockProductEntries - `/api/products/stock/low` - Get all Products where stock quantity is less than stock threshold
+      
 - POST
     - addProductEntry(CreateProductDTO) - `/api/products` - Create a new product
+      
 - PUT
     - modifyEntireProductById(productId, CreateProductDTO) - `/api/products/{id}` -  Update a product completely
+      
 - PATCH
     - updatePartialProductEntryById(productId, JSON body) - `/api/products/{id}` - Partial update of a product by Id
     - increaseStockQuantityById(productId, StockUpdateDTO) - `/api/products/{id}/stock/increase` - Increase product stock by Id
     - decreaseStockQuantityById(productId, StockUpdateDTO) - ``/api/products/{id}/stock/decrease -` Decrease product stock by Id
+      
 - DELETE
     - deleteProductById(productId) - `/api/products/{id}` - Delete product by ID
     - deleteProductBySku(sku) - `/api/products/sku/{sku}` - Delete product by SKU
