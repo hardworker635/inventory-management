@@ -6,9 +6,8 @@ Inventory Management System API is a backend application that provides RESTful e
 
 ## ARCHITECTURE DIAGRAM
 
-![alt text]((https://whimsical.com/N2CQuP3KBMavyEkiUaWKdR))
+---<img width="1250" height="696" alt="untitled (4)" src="https://github.com/user-attachments/assets/51f77c58-7eb1-4486-9a0f-01bed57d4b63" />
 
----
 
 ## Features
 
