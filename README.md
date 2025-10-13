@@ -101,7 +101,7 @@ src/
     ```
     
 
-1. The application supports both local and cloud PostgreSQL databases. You can either:
+1. The application supports a PostgreSQL database.
     - Use your **local PostgreSQL instance** by updating credentials in `application.properties`,
       
     
@@ -110,18 +110,8 @@ src/
     spring.datasource.username=your_username
     spring.datasource.password=your_password
     ```
-    
-    - Connect to a **hosted PostgreSQL database** on Aiven (Free Tier), which comes pre-configured with the `Product` table.
-     
-    
-    ```
-    spring.datasource.url=jdbc:postgresql://inventorymanagement-konalikhita-87a4.e.aivencloud.com:21062/defaultdb?sslmode=require
-    spring.datasource.username=avnadmin
-    spring.datasource.password=AVNS_LPyJLE_-5pwTHjGTCCr
-    ```
 
     
-
 1. Build and Run the application using maven commands: 
     
     ```bash
